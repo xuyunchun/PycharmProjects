@@ -1,4 +1,7 @@
 # coding:utf8
+'''
+爬虫主程序
+'''
 from baike_spider import url_manager,html_downloader,html_parser,html_outputer
 
 
