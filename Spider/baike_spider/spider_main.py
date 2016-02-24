@@ -1,6 +1,7 @@
 # coding:utf8
 '''
 爬虫主程序
+通过调用URL管理器、URL下载器、解析器、输出器完成网页内容的抓取和下载输出
 '''
 from baike_spider import url_manager,html_downloader,html_parser,html_outputer
 
@@ -11,7 +12,12 @@ class SpiderMain(object):
         self.downloader = html_downloader.HtmlDownloader()
         self.parser = html_parser.HtmlParser()
         self.outputer = html_outputer.HtmlOutputer()
-
+	'''
+	抓取方法，输入URL，输出output.html文件
+	主要逻辑:
+	URL管理器输入要获取的URL
+	
+	'''
     def craw(self, root_url):
         count = 1
         self.urls.add_new_url(root_url)
